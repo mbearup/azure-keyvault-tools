@@ -1,0 +1,19 @@
+{
+  "ManagementCerts": 
+  [
+    {
+      "KeyVaultName": "VAULT_NAME",
+      "KeyVaultSuffix": "vault.azure.net",
+      "Tenant": "AAD_TENANT_NAME",
+      "Subscriptions": 
+      [
+        {
+          "SubscriptionID": "SUBSCRIPTION_ID",
+          "ManagementEndpoint": "management.core.windows.net",
+          "KeyVaultSecretName": "SECRET_NAME"
+        }
+      ]
+    }
+  ]
+}
+

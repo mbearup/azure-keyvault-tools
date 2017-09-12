@@ -1,0 +1,7 @@
+PACKAGENAME (0.9.0) unstable; urgency=low
+
+  * Initial release
+  * rotate_certs.py rotates certs when needed
+
+ -- Matt Bearup <mbearup@microsoft.com>  Tue, 12 Sep 2017 15:25:30 +0700
+

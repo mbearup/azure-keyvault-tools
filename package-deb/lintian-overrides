@@ -1,0 +1,12 @@
+PACKAGE: extended-description-line-too-long
+PACKAGE: binary-without-manpage
+PACKAGE: dir-in-usr-local usr/local/lib/
+PACKAGE: dir-in-usr-local usr/local/lib/python3.5/
+PACKAGE: dir-in-usr-local usr/local/lib/python3.5/dist-packages/
+PACKAGE: dir-in-usr-local usr/local/lib/python3.5/dist-packages/azure_cert_rotation/
+PACKAGE: file-in-usr-local usr/local/lib/python3.5/dist-packages/azure_cert_rotation/__init__.py
+PACKAGE: file-in-usr-local usr/local/lib/python3.5/dist-packages/azure_cert_rotation/keyvault_client.py
+PACKAGE: file-in-usr-local usr/local/lib/python3.5/dist-packages/azure_cert_rotation/rdfe_client.py
+PACKAGE: file-in-unusual-dir usr/local/lib/python3.5/dist-packages/azure_cert_rotation/__init__.py
+PACKAGE: file-in-unusual-dir usr/local/lib/python3.5/dist-packages/azure_cert_rotation/keyvault_client.py
+PACKAGE: file-in-unusual-dir usr/local/lib/python3.5/dist-packages/azure_cert_rotation/rdfe_client.py

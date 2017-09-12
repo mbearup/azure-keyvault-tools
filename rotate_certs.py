@@ -9,7 +9,6 @@ import sys
 from azure_cert_rotation import rdfe_client
 from azure_cert_rotation import keyvault_client
 
-
 def process_config(config_file: str):
     config = parse_config(config_file)
     for entry in config['ManagementCerts']:

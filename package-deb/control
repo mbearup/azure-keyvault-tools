@@ -1,0 +1,10 @@
+Package: PACKAGENAME
+Version: VERSION
+Section: admin
+Priority: optional
+Depends: python3-pip, python3
+Architecture: amd64
+Maintainer: Matt Bearup <mbearup@microsoft.com>
+Description: Rotates Azure management certificates
+ Automated tool to fetch management certs from Azure KeyVault and publish them to RDFE
+

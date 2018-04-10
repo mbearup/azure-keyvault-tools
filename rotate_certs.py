@@ -27,13 +27,20 @@ def parse_config(config_file: str):
 def get_keyvault_client(entry):
     kv_name = entry['KeyVaultName']
     kv_suffix = entry['KeyVaultSuffix']
-    kv_app_id = os.environ[kv_name + '_appid']
-    kv_token = os.environ[kv_name + '_token']
-    kv_tenant = entry['Tenant']
-    kv_base_url = "https://{0}.{1}/".format(kv_name, kv_suffix)
+
     print("Processing KeyVault {0}".format(kv_name))
-    return keyvault_client(kv_app_id, kv_token, kv_base_url, kv_tenant)
-    
+    app_id_var = 'kv_name{0}'.format(_appid)
+    token_var = 'kv_name{0}'.format(_token)
+    tenant_var = 'Tenant'
+    if app_id_var in os.environ.keys() and \
+        token_var in os.environ.keys() and \
+        tenant in entry.keys():
+        # Use provided app id and token to create keyvault client
+        return keyvault_client(kv_name, kv_suffix,
+            os.environ[app_id_var], os.environ[token_var], entry[tenant])
+    # Use MSI/IMDS
+    return keyvault_client(kv_name, kv_suffix)
+
 def rdfe_can_list_certs(subscription_id : str, cert_file : str):
     rdfe = rdfe_client(subscription_id, cert_file)
     success, response = rdfe.list_certs()

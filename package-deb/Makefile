@@ -1,5 +1,5 @@
 PACKAGE=azure-cert-rotation
-VERSION=0.9.0
+VERSION=0.9.1
 FAKEROOT=./data-root
 DOCDIR=$(FAKEROOT)/usr/share/doc/$(PACKAGE)/
 LINTIANOVERRIDES=$(FAKEROOT)/usr/share/lintian/overrides/$(PACKAGE)
